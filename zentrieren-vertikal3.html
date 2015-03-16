@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Vertikal zentrieren</title>
+	<link rel="stylesheet" href="./standard.css"/>
+	<style type="text/css">
+		.parent {
+			border: 1px solid blue;
+			width: 40em;
+			height: 20em;
+		}
+		.child {
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+			background-color: grey;
+			width: 30em;
+			margin: 0 auto;
+			line-height: 60px;
+		}
+		img {
+			vertical-align: middle;
+		}
+	</style>
+</head>
+<body>
+
+	<h1>Vertikal zentrieren</h1>
+	<div class="parent">
+		<div class="child">
+			Vertikal zentrierter Text
+			<img src="img/50x50.gif" alt=""/>
+			mit Bild
+		</div>
+	</div>
+
+</body>
+</html>

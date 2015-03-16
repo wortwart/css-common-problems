@@ -1,0 +1,32 @@
+:root {
+	font-size: large;
+	font-family: "Verdana", "Arial", "Helvetica";
+	width: 800px;
+}
+
+h1 {
+	font-size: 2em;
+	font-weight: 100;
+}
+
+h2 {
+	font-size: 1.2em;
+	font-weight: 900
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+ul {
+	width: 400px;
+	border: 1px solid #ddd;
+}
+
+li:nth-of-type(even) {
+	background-color: #eee;
+}

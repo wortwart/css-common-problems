@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Breite und Höhe proportional</title>
+	<link rel="stylesheet" href="./standard.css"/>
+	<style type="text/css">
+		:root {
+			width: 100%;
+		}
+		.parent {
+			width: 70%;
+			max-width: 50rem;
+			min-width: 20rem;
+			height: 10rem;
+			margin-bottom: 1rem;
+			background-color: #ddd;
+		}
+		.child1 {
+			width: 15%;
+		}
+		.child1::before {
+			content: "";
+			display: block;
+			padding-top: 100%;
+			background-color: red;
+		}
+
+		.child2 {
+			width: 25%;
+			position: relative;
+		}
+		.child2::before {
+			content: "";
+			display: block;
+			padding-top: 66.6667%;
+		}
+		.innerChild {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background-color: red;
+		}
+
+		.child3 {
+			width: 15%;
+		}
+	</style>
+</head>
+<body>
+
+	<h1>Breite und Höhe proportional</h1>
+	<div class="parent">
+		<div class="child1"></div>
+	</div>
+
+	<div class="parent">
+		<div class="child2">
+			<div class="innerChild">mit Inhalt!</div>
+		</div>
+	</div>
+
+	<div class="parent">
+		<img src="img/50x50.gif" alt="" class="child3"/>
+	</div>
+
+</body>
+</html>
