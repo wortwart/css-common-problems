@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Drop-Down Menu</title>
+	<link rel="stylesheet" href="./standard.css"/>
+	<style type="text/css">
+		nav ul {
+			list-style: none;
+			float: left;
+			padding: 0;
+			border: 1px solid #ddd;
+			font-size: medium;
+		}
+
+		nav li {
+			position: relative;
+			float: left;
+			width: 5em;
+			padding: 0.5em;
+			background-color: white;
+		}
+
+		nav > ul > li:nth-child(even) {
+			background-color: #ddd;
+		}
+
+		nav li a {
+			display: block;
+			text-decoration: none;
+			color: black;
+		}
+
+		nav ul ul {
+			display: none;
+			position: absolute;
+			top: 100%;
+			left: 0;
+		}
+
+		nav ul ul li {
+			width: 8em;
+		}
+
+		nav ul ul ul {
+			top: 0;
+			left: 100%;
+		}
+
+		nav ul li:hover {
+			background: yellow;
+		}
+
+		nav ul li:hover > ul {
+			display: block;
+		}
+
+		nav ul ul a:not(:last-child)::after {
+			content: ' >';
+		}
+
+		h2:first-of-type {
+			clear: left;
+		}
+
+		p b:first-child:nth-last-child(3),
+		p b:first-child:nth-last-child(3) ~ * {
+			color: red;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>Drop-Down Menu</h1>
+	<nav>
+		<ul>
+			<li><a href="#">Start</a></li>
+			<li><a href="#">Menu 1</a>
+				<ul>
+					<li><a href="#">Item 1</a></li>
+					<li><a href="#">Item 2</a></li>
+					<li><a href="#">Item 3</a>
+						<ul>
+							<li><a href="#">2nd Layer 1</a>
+								<ul>
+									<li><a href="#">3rd Layer 1</a></li>
+									<li><a href="#">3rd Layer 2</a></li>
+									<li><a href="#">3rd Layer 3</a></li>
+									<li><a href="#">3rd Layer 4</a></li>
+								</ul>
+							</li>
+							<li><a href="#">2nd Layer 2</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Item 4</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Menu 2</a>
+				<ul>
+					<li><a href="#">Item 1</a></li>
+					<li><a href="#">Item 2</a></li>
+					<li><a href="#">Item 3</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Menu 3</a>
+				<ul>
+					<li><a href="#">Item 1</a></li>
+					<li><a href="#">Item 2 is so long that it will spread across several lines, as it is supposed to do</a>
+						<ul>
+							<li><a href="#">2nd Layer 1</a></li>
+							<li><a href="#">2nd Layer 2</a></li>
+							<li><a href="#">2nd Layer 3</a></li>
+							<li><a href="#">2nd Layer 4</a></li>
+							<li><a href="#">2nd Layer 5</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Item 3</a></li>
+					<li><a href="#">Item 4</a></li>
+					<li><a href="#">Item 5</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Menu 4</a></li>
+		</ul>
+	</nav>
+
+	<h2>Bonus Question: Selectors</h2>
+
+	<p><b>one</b>, <b>two</b> times bold.</p>
+	<p><b>one</b>, <b>two</b>, <b>three</b> times bold.</p>
+	<p><b>one</b>, <b>two</b>, <b>three</b>, <b>four</b> times bold.</p>
+	<p><b>one</b>, <b>two</b> times bold, once <i>italic</i>.</p>
+	<p><b>one</b>, <b>two</b>, <b>three</b> times bold, once <i>italic</i>.</p>
+
+</body>
+</html>

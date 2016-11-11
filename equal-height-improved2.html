@@ -2,31 +2,30 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Elemente mit gleicher Höhe</title>
+	<title>Elements with equal height</title>
 	<link rel="stylesheet" href="./standard.css"/>
 	<style type="text/css">
 		.outerbox {
-			position: relative;
 			border: 1px solid red;
 		}
 		nav {
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			left: 0;
 			width: 20%;
 			background-color: blue;
 		}
 		main {
-			margin-left: 20%;
+			width: 80%;
 			background-color: yellow;
+		}
+		nav, main {
+			display: table-cell;
+			vertical-align: top;
 		}
 	</style>
 </head>
 <body>
 	<header>
-		<h1>Elemente mit gleicher Höhe</h1>
-		<h2>Verbessert, Variante 1</h2>
+		<h1>Elements with equal height</h1>
+		<h2>With table-cell</h2>
 	</header>
 	<div class="outerbox">
 		<nav>
@@ -42,5 +41,6 @@
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 		</main>
 	</div>
+
 </body>
 </html>
