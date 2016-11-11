@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Box-Modell</title>
+	<link rel="stylesheet" href="./standard.css"/>
+	<style type="text/css">
+		.boxes {
+			width: 300px;
+			padding: 10px;
+			border: 5px solid red;
+			margin: 10px;
+		}
+		.traditional {box-sizing: content-box;}
+		.padding {box-sizing: padding-box;}
+		.border {box-sizing: border-box;}
+		.ruler {
+			width: 300px;
+			margin: 10px;
+			background-color: green;
+			text-align: center;
+		}
+		.boxes span {
+			background-color: #ddd;
+			width: 100%;
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<h1>Box-Modell</h1>
+	<div class="boxes traditional"><span>traditionell</span></div>
+	<div class="boxes padding"><span>inklusive Padding</span></div>
+	<div class="boxes border"><span>inklusive Border</span></div>
+	<div class="ruler">300 Pixel</div>
+</body>
+</html>

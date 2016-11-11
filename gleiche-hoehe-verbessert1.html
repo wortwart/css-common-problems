@@ -5,22 +5,20 @@
 	<title>Elemente mit gleicher Höhe</title>
 	<link rel="stylesheet" href="./standard.css"/>
 	<style type="text/css">
-		:root, body {
-			height: 100%;
-		}
 		.outerbox {
+			position: relative;
 			border: 1px solid red;
-			height: 70%;
 		}
 		nav {
-			float: left;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
 			width: 20%;
-			height: 100%;
 			background-color: blue;
 		}
 		main {
 			margin-left: 20%;
-			height: 100%;
 			background-color: yellow;
 		}
 	</style>
@@ -28,6 +26,7 @@
 <body>
 	<header>
 		<h1>Elemente mit gleicher Höhe</h1>
+		<h2>Verbessert, Variante 1</h2>
 	</header>
 	<div class="outerbox">
 		<nav>

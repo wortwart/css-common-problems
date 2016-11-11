@@ -10,8 +10,14 @@ h1 {
 }
 
 h2 {
-	font-size: 1.2em;
-	font-weight: 900
+	font-size: 1.25em;
+	font-weight: 900;
+}
+
+h3 {
+	font-size: 1.25em;
+	font-weight: 500;
+	font-style: italic;
 }
 
 a {
@@ -22,11 +28,11 @@ a:hover {
 	text-decoration: underline;
 }
 
-ul {
+ul.striped {
 	width: 400px;
 	border: 1px solid #ddd;
 }
 
-li:nth-of-type(even) {
+.striped li:nth-of-type(even) {
 	background-color: #eee;
 }

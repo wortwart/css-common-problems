@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Floats und Inline-Blöcke</title>
+	<link rel="stylesheet" href="./standard.css"/>
+	<style type="text/css">
+		.float_left {
+			float: left;
+		}
+
+		.float_right {
+			float: right;
+		}
+
+		section {
+			padding: 0.5rem;
+			width: 100%;
+			background-color: yellow;
+		}
+
+		section > div {
+			width: 5rem;
+			height: 3rem;
+			margin: 0.5rem;
+			border: 1px solid gray;
+			background-color: red;
+		}
+
+		.left_floats > div {
+			float: left;
+		}
+
+		.right_floats > div {
+			float: right;
+		}
+
+		.floats::after {
+			content: '';
+			clear: both;
+			display: block;
+		}
+
+		.inlineblocks {
+		}
+
+		.inlineblocks > div {
+			display: inline-block;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>Floats und Inline-Blöcke</h1>
+
+	<h2>Mit Floats (links)</h2>
+	<section class="floats left_floats">
+		Text am Anfang
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+		<div>5</div>
+		<div>6</div>
+		<div>7</div>
+		<div>8</div>
+		<div>9</div>
+		Text in der Mitte
+		<div>10</div>
+		<div>11</div>
+		<div>12</div>
+		<div>13</div>
+		<div>14</div>
+		<div>15</div>
+		<div>16</div>
+		<div>17</div>
+		<div>18</div>
+		Text am Ende
+	</section>
+
+	<h2>Mit Floats (rechts)</h2>
+	<section class="floats right_floats">
+		Text am Anfang
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+		<div>5</div>
+		<div>6</div>
+		<div>7</div>
+		<div>8</div>
+		<div>9</div>
+		Text in der Mitte
+		<div>10</div>
+		<div>11</div>
+		<div>12</div>
+		<div>13</div>
+		<div>14</div>
+		<div>15</div>
+		<div>16</div>
+		<div>17</div>
+		<div>18</div>
+		Text am Ende
+	</section>
+
+	<h2>Mit Inline-Blöcken</h2>
+	<section class="inlineblocks">
+		Text am Anfang
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+		<div>5</div>
+		<div>6</div>
+		<div>7</div>
+		<div>8</div>
+		<div>9</div>
+		Text in der Mitte
+		<div>10</div>
+		<div>11</div>
+		<div>12</div>
+		<div>13</div>
+		<div>14</div>
+		<div>15</div>
+		<div>16</div>
+		<div>17</div>
+		<div>18</div>
+		Text am Ende
+	</section>
+
+
+	<h2>Typisches Einsatzgebiet für Floats</h2>
+
+	<h3>Float left, Bild am Anfang</h3>
+	<section>
+		<img src="img/float-left.png" class="float_left"/>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</section>
+
+	<h3>Float left, Bild am Ende</h3>
+	<section>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		<img src="img/float-left.png" class="float_left"/>
+	</section>
+
+	<h3>Float right, Bild am Anfang</h3>
+	<section>
+		<img src="img/float-right.png" class="float_right"/>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</section>
+
+	<h3>Float right, Bild am Ende</h3>
+	<section>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		<img src="img/float-right.png" class="float_right"/>
+	</section>
+
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Nummerierte Überschriften</title>
+	<link rel="stylesheet" href="./standard.css"/>
+	<style type="text/css">
+		:root {
+			counter-reset: level1;
+		}
+
+		h1::before {
+			content: counter(level1, upper-roman) " ";
+			counter-increment: level1;
+		}
+
+		h1 {
+			counter-reset: level2;
+		}
+
+		h2::before {
+			content: counter(level1) "." counter(level2) " ";
+			counter-increment: level2;
+		}
+
+		h2 {
+			counter-reset: level3;
+		}
+
+		h3::before {
+			content: counter(level1) "." counter(level2) "." counter(level3) " ";
+			counter-increment: level3;
+		}
+	</style>
+</head>
+<body>
+	<h1>Überschrift</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	<h1>Überschrift</h1>
+	<h2>Unterpunkt</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	<h2>Unterpunkt</h2>
+	<h3>Unterpunkt</h3>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	<h3>Unterpunkt</h3>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	<h3>Unterpunkt</h3>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	<h1>Schluss</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</body>
+</html>

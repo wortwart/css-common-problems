@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Nummerierte Liste</title>
+	<link rel="stylesheet" href="./standard.css"/>
+	<style type="text/css">
+		ol {
+			counter-reset: multiple;
+			list-style-type: none;
+		}
+		li::before {
+			content: counters(multiple, '.') " ";
+			counter-increment: multiple;
+		}
+		li {
+			background-color: white !important;
+		}
+	</style>
+</head>
+<body>
+	<h1>Nummerierte Liste</h1>
+	<ol>
+		<li><a href="#">Start</a></li>
+		<li><a href="#">Menü 1</a>
+			<ol>
+				<li><a href="#">Punkt 1</a></li>
+				<li><a href="#">Punkt 2</a></li>
+				<li><a href="#">Punkt 3</a>
+					<ol>
+						<li><a href="#">Unterpunkt 1</a>
+							<ol>
+								<li><a href="#">3. Ebene 1</a></li>
+								<li><a href="#">3. Ebene 2</a></li>
+								<li><a href="#">3. Ebene 3</a></li>
+								<li><a href="#">3. Ebene 4</a></li>
+							</ol>
+						</li>
+						<li><a href="#">Unterpunkt 2</a></li>
+					</ol>
+				</li>
+				<li><a href="#">Punkt 4</a></li>
+			</ol>
+		</li>
+		<li><a href="#">Menü 2</a>
+			<ol>
+				<li><a href="#">Punkt 1</a></li>
+				<li><a href="#">Punkt 2</a></li>
+				<li><a href="#">Punkt 3</a></li>
+			</ol>
+		</li>
+		<li><a href="#">Menü 3</a>
+			<ol>
+				<li><a href="#">Punkt 1</a></li>
+				<li><a href="#">Punkt 2 mit Überlänge, die über mehrere Zeilen geht</a>
+					<ol>
+						<li><a href="#">Unterpunkt 1</a></li>
+						<li><a href="#">Unterpunkt 2</a></li>
+						<li><a href="#">Unterpunkt 3</a></li>
+						<li><a href="#">Unterpunkt 4</a></li>
+						<li><a href="#">Unterpunkt 5</a></li>
+					</ol>
+				</li>
+				<li><a href="#">Punkt 3</a></li>
+				<li><a href="#">Punkt 4</a></li>
+				<li><a href="#">Punkt 5</a></li>
+			</ol>
+		</li>
+		<li><a href="#">Menü 4</a></li>
+	</ol>
+</body>
+</html>

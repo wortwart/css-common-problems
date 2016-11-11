@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Sprungmarken</title>
+	<link rel="stylesheet" href="./standard.css"/>
+	<style type="text/css">
+		.skip {
+			position: absolute;
+			top: -1000em;
+		}
+
+		.skip:focus,
+		.skip:active {
+			top: 1px;
+			left: 1px;
+			background-color: #eee;
+		}
+
+		*:not(.skip):target {
+			color: #fff;
+			background-color: #666;
+		}
+
+		*:focus {
+			outline: 1px solid red;
+		}
+
+		/*
+			weitere Styles:
+			siehe gleiche-hoehe-verbessert1.html
+		*/
+
+		.outerbox {
+			border: 1px solid red;
+		}
+		nav {
+			width: 20%;
+			background-color: blue;
+		}
+		main {
+			width: 80%;
+			background-color: yellow;
+		}
+		nav, main {
+			display: table-cell;
+			vertical-align: top;
+		}
+	</style>
+</head>
+<body>
+	<a href="#lorem" id="skiptocontent" class="skip">Navigation überspringen</a>
+	<a href="#ipsum" class="skip">Zu <q>Ipsum!</q> springen</a>
+	<h1>Sprungmarken</h1>
+	<div class="outerbox">
+		<nav>
+			<ul>
+				<li><a href="http://ct.de/">Link</a></li>
+				<li><a href="http://ct.de/">Link</a></li>
+				<li><a href="http://ct.de/">Link</a></li>
+				<li><a href="http://ct.de/">Link</a></li>
+				<li><a href="http://ct.de/">Link</a></li>
+				<li><a href="http://ct.de/">Link</a></li>
+				<li><a href="http://ct.de/">Link</a></li>
+				<li><a href="http://ct.de/">Link</a></li>
+				<li><a href="http://ct.de/">Link</a></li>
+				<li><a href="http://ct.de/">Link</a></li>
+				<li><a href="http://ct.de/">Link</a></li>
+				<li><a href="http://ct.de/">Link</a></li>
+				<li><a href="http://ct.de/">Link</a></li>
+				<li><a href="http://ct.de/">Link</a></li>
+				<li><a href="http://ct.de/">Link</a></li>
+				<li><a href="http://ct.de/">Link</a></li>
+				<li><a href="http://ct.de/">Link</a></li>
+				<li><a href="http://ct.de/">Link</a></li>
+			</ul>
+		</nav>
+		<main>
+
+			<a href="#skiptocontent" class="skip">Zurück zur Navigation</a>
+
+			<h2 id="lorem" tabindex="0">Lorem!</h2>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+			<h2 id="ipsum" tabindex="0">Ipsum!</h2>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+		</main>
+	</div>
+	<footer>
+		<ul>
+			<li><a href="http://ct.de/">Link</a></li>
+			<li><a href="http://ct.de/">Link</a></li>
+			<li><a href="http://ct.de/">Link</a></li>
+			<li><a href="http://ct.de/">Link</a></li>
+			<li><a href="http://ct.de/">Link</a></li>
+		</ul>
+	</footer>
+</body>
+</html>

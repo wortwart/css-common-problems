@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Elemente mit gleichem Abstand</title>
+	<link rel="stylesheet" href="./standard.css"/>
+	<style type="text/css">
+		section {
+			padding: 0.5rem;
+			width: 100%;
+			background-color: yellow;
+			text-align: justify;
+			text-justify: distribute-all-lines;
+			font-size: 0;
+		}
+
+		section > div {
+			display: inline-block;
+			width: 5rem;
+			height: 3rem;
+			margin: 0.5rem;
+			border: 1px solid gray;
+			background-color: red;
+		}
+
+		section::after {
+			content: '';
+			width: 100%;
+			display: inline-block;
+		}
+	</style>
+</head>
+<body>
+	<h1>Elemente mit gleichem Abstand</h1>
+	<section>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</section>
+</body>
+</html>
